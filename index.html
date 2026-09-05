@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOCUS - Number Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <!-- START SCREEN -->
+        <section id="start-screen" class="screen active">
+            <h1 class="title">FOCUS</h1>
+            <p class="description">Find the numbers in order as fast as you can.</p>
+            <div class="info-badges">
+                <span class="badge">25 Numbers</span>
+                <span class="badge">30 Seconds</span>
+            </div>
+
+            <!-- MODE SELECTOR -->
+            <div class="mode-selector">
+                <span class="mode-label">MODE:</span>
+                <div class="mode-options">
+                    <button class="mode-btn active" data-mode="bw">B & W</button>
+                    <button class="mode-btn" data-mode="color">COLOR</button>
+                </div>
+            </div>
+
+            <button id="start-btn" class="btn">START GAME</button>
+        </section>
+
+        <!-- GAME SCREEN -->
+        <section id="game-screen" class="screen">
+            <header class="game-header">
+                <div class="stat-box">
+                    <span class="stat-label">TIME:</span>
+                    <span id="timer-display" class="stat-value">30</span>
+                </div>
+                <button id="mode-toggle-btn" class="mode-toggle-pill" title="Switch Mode">B & W</button>
+                <div class="stat-box">
+                    <span class="stat-label">FIND:</span>
+                    <span id="target-display" class="stat-value">1</span>
+                </div>
+            </header>
+            <div id="number-grid" class="grid-container"></div>
+        </section>
+
+        <!-- END SCREEN (TIME'S UP / COMPLETE) -->
+        <section id="end-screen" class="screen">
+            <h1 id="end-title" class="title">TIME'S UP</h1>
+            <p id="end-message" class="message">You found 0 / 25 numbers</p>
+            <p id="end-submessage" class="submessage"></p>
+            <button id="restart-btn" class="btn">TRY AGAIN</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
